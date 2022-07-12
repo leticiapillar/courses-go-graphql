@@ -2,19 +2,40 @@
 
 package model
 
-type NewTodo struct {
-	Text   string `json:"text"`
-	UserID string `json:"userId"`
+type Category struct {
+	ID          string    `json:"id"`
+	Name        string    `json:"name"`
+	Description *string   `json:"description"`
+	Courses     []*Course `json:"courses"`
 }
 
-type Todo struct {
-	ID   string `json:"id"`
-	Text string `json:"text"`
-	Done bool   `json:"done"`
-	User *User  `json:"user"`
+type Chapter struct {
+	ID       string    `json:"id"`
+	Name     string    `json:"name"`
+	Course   *Course   `json:"course"`
+	Category *Category `json:"category"`
 }
 
-type User struct {
-	ID   string `json:"id"`
-	Name string `json:"name"`
+type Course struct {
+	ID          string     `json:"id"`
+	Name        string     `json:"name"`
+	Description *string    `json:"description"`
+	Category    *Category  `json:"category"`
+	Chapters    []*Chapter `json:"chapters"`
+}
+
+type NewCategory struct {
+	Name        string `json:"name"`
+	Description string `json:"description"`
+}
+
+type NewChapter struct {
+	Name     string `json:"name"`
+	CourseID string `json:"courseId"`
+}
+
+type NewCourse struct {
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	CategoryID  string `json:"categoryId"`
 }

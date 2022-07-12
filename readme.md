@@ -15,4 +15,11 @@ go mod init github.com/leticiapillar/courses-go-graphql
 - [Building the server](https://gqlgen.com/getting-started/#building-the-server)
 - This lib generates a todo list example, using this command: `go run github.com/99designs/gqlgen init`
 
+### Courses schema
+- Update file `graph/schema.graphqls` with Courses schema
+- Delete files:
+    - `grpah/generated/*`
+    - `grpah/model/*`
+    - `graph/schema.resolvers.go`
+- Execute command: `go run github.com/99designs/gqlgen generate` to generate structute files of schema.
 
