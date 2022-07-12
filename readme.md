@@ -8,4 +8,11 @@ Courses GraphQL applications example implemented in GOLang.
 go mod init github.com/leticiapillar/courses-go-graphql
 ```
 
+## Tool: gqlgen
+### Getting Started
+- Building GraphQL servers in golang
+- [Set up project](https://gqlgen.com/getting-started/#set-up-project)
+- [Building the server](https://gqlgen.com/getting-started/#building-the-server)
+- This lib generates a todo list example, using this command: `go run github.com/99designs/gqlgen init`
+
 
