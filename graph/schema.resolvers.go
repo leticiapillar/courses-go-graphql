@@ -25,7 +25,21 @@ func (r *mutationResolver) CreateCategory(ctx context.Context, input model.NewCa
 
 // CreateCourse is the resolver for the createCourse field.
 func (r *mutationResolver) CreateCourse(ctx context.Context, input model.NewCourse) (*model.Course, error) {
-	panic(fmt.Errorf("not implemented"))
+	var category *model.Category
+	for _, v := range r.Categories {
+		if v.ID == input.CategoryID {
+			category = v
+		}
+	}
+
+	course := &model.Course {
+		ID: fmt.Sprintf("T%d", rand.Int()),
+		Name: input.Name,
+		Description: &input.Description,
+		Category: category,
+	}
+	r.Courses = append(r.Courses, course)
+	return course, nil
 }
 
 // CreateChapter is the resolver for the createChapter field.
