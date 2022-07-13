@@ -1,0 +1,50 @@
+
+  query findCategories {
+    categories {
+      id
+      name
+      description
+      courses {
+        id
+        name
+        chapters {
+          id 
+          name
+        }
+      }   
+    }
+  }
+  
+  query findCourses {
+    courses {
+      id
+      name
+      description
+      category {
+        id
+        name
+      }
+      chapters {
+        id
+        name
+      }
+    }
+  }
+  
+  query findChapters {
+    chapters {
+      id
+      name
+      course {
+        id
+        description
+        name
+        category {
+          name
+        }
+        chapters {
+          name
+        }
+      }
+    }
+  }
