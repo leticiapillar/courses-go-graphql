@@ -1,8 +1,11 @@
 ## GraphQL: application implemented in GOLang
 
-Courses GraphQL applications example implemented in GOLang.
-- using tool [gqlgen](https://github.com/99designs/gqlgen)
+- Course: Full Cycle 3.0
+- Module: Comunicação entre sistemas
+- "Courses" is an example of GraphQL Application implemented in GOLang.
+- Using tool [gqlgen](https://github.com/99designs/gqlgen)
 
+---
 ### Initializing mod in GOLang
 ```bash
 go mod init github.com/leticiapillar/courses-go-graphql
@@ -31,3 +34,18 @@ Implementing lazy loading to Courses and Chapters
 - Add models path to file `gqlgen.yml` in `:models` section
 - Generate resolver with command: `go run github.com/99designs/gqlgen generate`
 - Implementing Courses and Chpaters resolvers
+
+### Run server
+```bash
+go run server.go 
+
+# GraphQL playground
+http://localhost:8080/
+```
+
+---
+## References
+- [Introduction to GraphQL](https://graphql.org/learn/)
+- [How to GraphQL](https://www.howtographql.com/)
+- [Go GraphQL tools](https://graphql.org/code/#go)
+- [Course: Full Cycle 3.0](https://imersao.fullcycle.com.br/page/lancamento/)
