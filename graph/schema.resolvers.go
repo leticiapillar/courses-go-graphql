@@ -5,6 +5,7 @@ package graph
 
 import (
 	"context"
+	"math/rand"
 	"fmt"
 
 	"github.com/leticiapillar/courses-go-graphql/graph/generated"
@@ -13,7 +14,13 @@ import (
 
 // CreateCategory is the resolver for the createCategory field.
 func (r *mutationResolver) CreateCategory(ctx context.Context, input model.NewCategory) (*model.Category, error) {
-	panic(fmt.Errorf("not implemented"))
+	category := &model.Category {
+		ID: fmt.Sprintf("T%d", rand.Int()),
+		Name: input.Name,
+		Description: &input.Description,
+	}
+	r.Categories = append(r.Categories, category)
+	return category, nil
 }
 
 // CreateCourse is the resolver for the createCourse field.
