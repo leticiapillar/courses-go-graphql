@@ -23,3 +23,11 @@ go mod init github.com/leticiapillar/courses-go-graphql
     - `graph/schema.resolvers.go`
 - Execute command: `go run github.com/99designs/gqlgen generate` to generate structute files of schema.
 
+### Lazy loading
+Implementing lazy loading to Courses and Chapters
+- Refator on `graph/model/models_gen.go` file 
+- Create one model file to category, chapter and course
+- Move repectively type structute to model file
+- Add models path to file `gqlgen.yml` in `:models` section
+- Generate resolver with command: `go run github.com/99designs/gqlgen generate`
+- Implementing Courses and Chpaters resolvers

@@ -61,3 +61,9 @@ models:
       - github.com/99designs/gqlgen/graphql.Int
       - github.com/99designs/gqlgen/graphql.Int64
       - github.com/99designs/gqlgen/graphql.Int32
+  Category:
+    model: github.com/leticiapillar/courses-go-graphql/graph/model.Category
+  Chapter:
+    model: github.com/leticiapillar/courses-go-graphql/graph/model.Chapter
+  Course:
+    model: github.com/leticiapillar/courses-go-graphql/graph/model.Course
